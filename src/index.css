@@ -13,15 +13,15 @@ body {
   min-height: 100vh;
 }
 
-.gradient {
+/* .gradient {
   border: 1px solid transparent;
   background: linear-gradient(90deg, rgba(241,157,219,1) 0%, rgba(172,190,221,1) 48%, rgba(84,232,224,1) 100%);
   backdrop-filter: blur(48%);
   z-index: -1;
-}
+} */
 
 .gradient-div {
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   background: linear-gradient(90deg, rgba(246,148,218,1) 60%, rgba(83,244,233,1) 100%);
   backdrop-filter: blur(48%);
   z-index: -1;
@@ -50,16 +50,29 @@ body {
   color: #FFF;
 }
 
-.hover-description {
-  display: none;
+
+.card-container {
+  height: 440px; 
+  width: 390px;
+  overflow: hidden;
 }
 
-.ProjectCard:hover .description {
-  display: none;
+.card-content {
+  width: 100%;
+  height: 100%;
 }
 
-.ProjectCard:hover .hover-description {
-  display: block;
+.cardDescription {
+  transition: 0.7s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cardDescription .div {
+  opacity: 1;
+}
+
+.hoverControl:hover .cardDescription {
+  right: 0;
 }
 
 @media (prefers-color-scheme: dark) {
