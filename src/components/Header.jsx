@@ -1,13 +1,12 @@
-import icon from '../assets/icon.jpg'
 
 export default function Header() {
   function downloadResume() {
     // Create a dummy element
     var element = document.createElement('a');
     // Set the file's URL
-    element.setAttribute('href', '../files/GonzaloPedernera.pdf');
+    element.setAttribute('href', '../../public/files/CV-GonzaloPedernera.pdf');
     // Set the file's name
-    element.setAttribute('download', 'GonzaloPedernera.pdf');
+    element.setAttribute('download', 'CV - Gonzalo Pedernera.pdf');
     // Hide the element
     element.style.display = 'none';
     // Append the element to the body
