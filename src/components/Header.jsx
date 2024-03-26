@@ -2,7 +2,7 @@
 export default function Header() {
   function downloadResume() {
     var element = document.createElement('a');
-    element.setAttribute('href', '../../public/files/CV-GonzaloPedernera.pdf');
+    element.setAttribute('href', '/files/CV-GonzaloPedernera.pdf');
     element.setAttribute('download', 'CV - Gonzalo Pedernera.pdf');
     element.style.display = 'none';
     document.body.appendChild(element);
