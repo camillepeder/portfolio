@@ -1,28 +1,18 @@
 
 export default function Header() {
   function downloadResume() {
-    // Create a dummy element
     var element = document.createElement('a');
-    // Set the file's URL
     element.setAttribute('href', '../../public/files/CV-GonzaloPedernera.pdf');
-    // Set the file's name
     element.setAttribute('download', 'CV - Gonzalo Pedernera.pdf');
-    // Hide the element
     element.style.display = 'none';
-    // Append the element to the body
     document.body.appendChild(element);
-    // Trigger the click event
     element.click();
-    // Clean up
     document.body.removeChild(element);
 }
   return (
     <div className='flex flex-row gap-5 justify-between items-center w-full'>
       <div className='flex flex-row gap-5 jus items-center'>
       <div className="avatar">
-        {/* <div className="w-16 h-16 rounded-full">
-          <img src={icon} />
-        </div> */}
       </div>
         <h1>Gonzalo Pedernera</h1>
       </div>
