@@ -21,7 +21,8 @@ export default function Header() {
         <div className='justify-center items-center flex'>
           <a href='https://github.com/gonzalopedernera' target='_blank' rel='noreferrer'>Github</a>
         </div>
-        <button onClick={downloadResume}>Resume</button>
+        {/* <button onClick={downloadResume}>Resume</button> */}
+        <a href="https://gonzalopedernera.github.io/portfolio/blob/main/public/files/CV-GonzaloPedernera.pdf">Resume</a>
         <div className="dropdown dropdown-hover">
         <div tabIndex={0} role="button" className="btn midbttn text-black m-0 customFont">Contact</div>
           <ul tabIndex={0} className="dropdown-content z-[15] menu p-2 shadow bg-base-100 rounded-box w-52">
