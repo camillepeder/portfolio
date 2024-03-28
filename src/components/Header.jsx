@@ -17,12 +17,12 @@ export default function Header() {
         <h1>Gonzalo Pedernera</h1>
       </div>
 
-      <div className='flex flex-row gap-7 justify-center align-center'>
+      <div className='flex flex-row gap-7 justify-center items-center'>
         <div className='justify-center items-center flex'>
           <a href='https://github.com/gonzalopedernera' target='_blank' rel='noreferrer'>Github</a>
         </div>
         {/* <button onClick={downloadResume}>Resume</button> */}
-        <a href="https://gonzalopedernera.github.io/portfolio/blob/main/public/files/CV-GonzaloPedernera.pdf">Resume</a>
+        <a href="https://gonzalopedernera.github.io/portfolio/public/files/CV-GonzaloPedernera.pdf">Resume</a>
         <div className="dropdown dropdown-hover">
         <div tabIndex={0} role="button" className="btn midbttn text-black m-0 customFont">Contact</div>
           <ul tabIndex={0} className="dropdown-content z-[15] menu p-2 shadow bg-base-100 rounded-box w-52">
