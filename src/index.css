@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
 body {
   font-family: 'Rubik', sans-serif;
   background: rgb(165,98,122);
@@ -9,20 +20,114 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  width: auto;
+  height: auto;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.desktop-header {
+  width: 100%;
+  height: auto;
+}
+.Hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200;
+  gap: 1.25rem;
+  border-radius: 1rem;
+  border-width: 2px;
+  border-color: #FFF;
+  z-index: 10;
+}
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  gap: 1.25rem;
+  min-height: 600px;
+  width: inherit;
 }
 
 .gradient-div {
   background: linear-gradient(90deg, rgba(246,148,218,1) 60%, rgba(83,244,233,1) 100%);
   backdrop-filter: blur(48%);
   z-index: -1;
+  width: 100%;
 }
 
-.img {
-  width: 400px;
-  height: 400px;
+.About-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  color: black;
 }
+
+.About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  background-color: transparent;
+}
+
+.About h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: left;
+  color: rgb(75 85 99);
+  left: 0px;
+  padding-left: 1.5rem;
+}
+
+
+
+.Photo {
+  display: block;
+  max-width: 440px;
+  max-height: 450px;
+}
+
+.Badge-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  top: 0px;
+}
+
+.Badges {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0rem;
+
+}
+
+.Badges div {
+  gap: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem;
+  justify-content: center;
+}
+
+.Badge-wraper .Badges div img {
+  max-width: 90px;
+  max-height: 30px;
+}
+
 .midbttn {
   background: #acbedd;
 }
@@ -41,11 +146,31 @@ body {
   color: #FFF;
 }
 
+.grid-control {
+  display: grid;
+  width: 100%;
+  align-items: center;
+}
 
-.card-container {
+.project-wrapper {
+  display: grid;
+  width: 100%;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.card-wrapper {
   height: 440px; 
   width: 390px;
   overflow: hidden;
+  color: rgb(0 0 0);
+  position: relative;
+  border-width: 4px;
+  border-color: rbg(255 255 255);
+  border-radius: 1rem;
+
 }
 
 .card-content {
@@ -58,16 +183,37 @@ body {
   max-height: 390px;
 }
 
-.cardDescription {
+.card-image {
+  background-color: rgb(255 255 255);
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-image img {
+  max-width: 18rem;
+  max-height: 18rem;
+}
+
+.card-description {
   transition: 0.7s;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+  border-radius: 1rem;
+  right: -100%;
+  padding: 0.5rem;
+  font-size: 1.25rem;
 }
 
-.cardDescription .div {
-  opacity: 1;
-}
-
-.hoverControl:hover .cardDescription {
+.hoverControl:hover .card-description {
   right: 0;
 }
 
@@ -80,5 +226,163 @@ body {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(29,35,42,1) 100%);
     color: #FFF;
+  }
+}
+
+@media (min-width: 900px) {
+  .card-wrapper {
+    grid-row: 1;
+  }
+  .desktop-header {
+    display: flex;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+  .mobile-header{
+    display: none;
+  }
+  .mobile-aboutme {
+    display: none;
+  }
+  .project-wrapper {
+    grid-template-rows: repeat(auto-fill, minmax(390px, 1fr));
+    grid-template-columns: 390px;
+  }
+  .Description {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 900px) {
+  .Description p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 900px) {
+  .gradient-div {
+    background: linear-gradient(360deg, rgba(246,148,218,1) 50%, rgba(83,244,233,1) 90%);
+  }
+  .svg {
+    width: 30px;
+    height: 30px;
+  }
+  .desktop-header{
+    display: none;
+  }
+  .desktop-aboutme {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 0.25rem;
+    margin: 1rem 0rem;
+  }
+  .Hero-wrapper {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .Hero {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+
+
+  .Badges {
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .Badges div {
+    gap: 0.5rem;
+    display: flex;
+    max-width: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Badge-wraper .Badges div img {
+    width: 75px;
+    height: 35px;
+  }
+  .About-wrapper {
+    padding: 0.5rem;
+  }
+  .About h1 {
+    text-align: center;
+    left: 0px;
+    padding-left: 0rem;
+  }
+ .Description {
+    width: 100%;
+    display: block;
+    text-align: left;
+  } 
+  .Photo {
+    display: block;
+    float: left;
+    max-width: 150px;
+    max-height: 155px;
+    margin-right: 1rem; 
+  }
+  
+  .Description p {
+    font-size: 1.25rem;
+  }
+  .grid-control {
+    max-width: 100%;
+    justify-content: center;
+    max-height: 100%;
+  }
+  .project-wrapper {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .card-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .card-content {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .card-image img {
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+
+  .card-description {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    border-radius: 1rem;
+    right: 0px;
+    padding: 0.5rem;
+    font-size: 1rem;
   }
 }

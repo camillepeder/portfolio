@@ -1,4 +1,5 @@
 import Header from './Header'
+import MobileHeader from './MobileHeader'
 import HeroSection from './HeroSection'
 import ProjectCard from './ProjectCard'
 import IrisIcon from '../assets/Iris.svg'
@@ -18,19 +19,24 @@ function Wrapper() {
 
   return (
     <>
-    <Header />
-    <div className='justify-center items-center flex flex-col gap-5 py-5'>
+    <div className='desktop-header'>
+      <Header />
+    </div>
+    <div className='mobile-header'>
+      <MobileHeader/>
+    </div>
       {/* Hero */}
-
+        
         <HeroSection />
       <div className='m-5'>
         <h1 className='text-4xl'> My Projects</h1>
       </div>
-      <div className='flex flex-row gap-10 justify-center items-center'>
-        <ProjectCard name='Iris' description={Iris} img={IrisIcon} link='https://youtu.be/aFq4CJf55Ek'/>
-        <ProjectCard name='ToDo' description={ToDo} img={ToDoIcon} link='https://github.com/gonzalopedernera/ToDo'/>
+      <div className='grid-control'>
+        <div className='project-wrapper'>
+          <ProjectCard name='Iris' description={Iris} img={IrisIcon} link='https://youtu.be/aFq4CJf55Ek'/>
+          <ProjectCard name='ToDo' description={ToDo} img={ToDoIcon} link='https://github.com/gonzalopedernera/ToDo'/>
+        </div>
       </div>
-    </div>
     </>
   )
 }

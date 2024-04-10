@@ -1,16 +1,8 @@
 
 export default function Header() {
-  function downloadResume() {
-    var element = document.createElement('a');
-    element.setAttribute('href', '/files/CV-GonzaloPedernera.pdf');
-    element.setAttribute('download', 'CV - Gonzalo Pedernera.pdf');
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-}
+
   return (
-    <div className='flex flex-row gap-5 justify-between items-center w-full'>
+    <div className='flex flex-row flex-wrap gap-5 justify-between items-center w-full'>
       <div className='flex flex-row gap-5 jus items-center'>
       <div className="avatar">
       </div>
@@ -22,7 +14,7 @@ export default function Header() {
           <a href='https://github.com/gonzalopedernera' target='_blank' rel='noreferrer'>Github</a>
         </div>
         {/* <button onClick={downloadResume}>Resume</button> */}
-        <a href="https://gonzalopedernera.github.io/portfolio/files/CV-GonzaloPedernera.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a href="https://gonzalopedernera.github.io/portfolio/files/CV-GonzaloPedernera.pdf" target="_blank" rel="noreferrer">CV</a>
         <div className="dropdown dropdown-hover">
         <div tabIndex={0} role="button" className="btn midbttn text-black m-0 customFont">Contact</div>
           <ul tabIndex={0} className="dropdown-content z-[15] menu p-2 shadow bg-base-100 rounded-box w-52">

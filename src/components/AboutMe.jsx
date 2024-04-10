@@ -2,27 +2,25 @@ import photo from '../assets/Photo.png'
 import Badges from './Badges'
 export default function AboutMe() {
   return (
-    <div className='flex flex-row justify-center items-center gap-5 p-5 text-black '>
-      <div className='flex flex-col justify-center gap-5 bg-transparent'>
-        <h1 className='text-4xl text-left text-gray-600 left-0 pl-6'>
+    <div className='About-wrapper'>
+      <div className='About'>
+        <h1>
           About me
         </h1>
-        <div className=' text-left text-2xl gap-7'>
-          <div className='px-5 my-5'>
+        <div className='Description'>
             <p>
-              I am a software engineer with a growing passion for software developement.
+              I am a software developer with a growing passion for software developement and computer science.
               Having studied Computer Science Foundations at Holberton School Uruguay, I am now looking to grow my skills,
               while i keep working to improve my knowledge in new technologies.
             </p>
-          </div>
-          <div>
-            <Badges/>
-          </div>
+        <div>
+          <Badges/>
         </div>
       </div>
-      <div className="">
-        <img src={photo} className=''/>
-      </div>
     </div>
+    <div>
+      <img src={photo} className='Photo'/>
+    </div>
+  </div>
   )
 }
