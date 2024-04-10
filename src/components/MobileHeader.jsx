@@ -12,7 +12,7 @@ export default function MobileHeader() {
     <li><a href='mailto:gonzalopeder2@gmail.com' target='_blank' rel='noreferrer'>Send Mail</a></li>
   </ul>
   <div>
-    <h1 className='text-2xl'>Menu</h1>
+    <h1 className='text-2xl text-white'>Menu</h1>
   </div>
 </div>
   )

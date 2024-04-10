@@ -29,7 +29,7 @@ function Wrapper() {
         
         <HeroSection />
       <div className='m-5'>
-        <h1 className='text-4xl'> My Projects</h1>
+        <h1 className='text-4xl text-white'> My Projects</h1>
       </div>
       <div className='grid-control'>
         <div className='project-wrapper'>

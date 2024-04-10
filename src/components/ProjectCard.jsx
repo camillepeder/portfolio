@@ -22,7 +22,7 @@ export default function ProjectCard({ name, description, img, link }) {
           <div className=' text-white p-2 flex flex-col gap-10 justify-center items-center'>
             <div className='flex flex-col justify-between text-left px-3 py-1 gap-7 card-text'>
               <div className="flex flex-col justify-center items-center top-0 h-full">
-                <h1 className='text-4xl uppercase'>{name}:</h1>
+                <h1 className='text-4xl uppercase text-white'>{name}:</h1>
                 <p className=' whitespace-pre-line break-words'>{description}</p>
               </div>
               <button className="btn btn-neutral w-2/5 customFont" onClick={btnRedirect}>Go to project</button>
