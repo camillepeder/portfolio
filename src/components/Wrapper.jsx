@@ -34,7 +34,7 @@ function Wrapper() {
       <div className='grid-control'>
         <div className='project-wrapper'>
           <ProjectCard name='Iris' description={Iris} img={IrisIcon} link='https://youtu.be/aFq4CJf55Ek'/>
-          <ProjectCard name='ToDo' description={ToDo} img={ToDoIcon} link='https://github.com/gonzalopedernera/ToDo'/>
+          <ProjectCard name='ToDo' description={ToDo} img={ToDoIcon} link='https://github.com/camillepeder/ToDo'/>
         </div>
       </div>
     </>
